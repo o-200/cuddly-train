@@ -1,0 +1,75 @@
+GEM
+  specs:
+    diff-lcs (1.5.1)
+    rspec-core (3.13.2)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-support (3.13.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    bigdecimal (3.1.9)
+    capybara (3.40.0)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.11)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
+    matrix (0.4.2)
+    mini_mime (1.1.5)
+    mini_portile2 (2.8.8)
+    nio4r (2.7.4)
+    nokogiri (1.18.1)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
+    nokogiri (1.18.1-x86_64-linux-gnu)
+      racc (~> 1.4)
+    public_suffix (6.0.1)
+    puma (6.5.0)
+      nio4r (~> 2.0)
+    racc (1.8.1)
+    rack (3.1.8)
+    rack-test (2.2.0)
+      rack (>= 1.3)
+    regexp_parser (2.10.0)
+    roda (3.87.0)
+      rack
+    rspec (3.13.0)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    sequel (5.88.0)
+      bigdecimal
+    sqlite3 (2.5.0)
+      mini_portile2 (~> 2.8.0)
+    sqlite3 (2.5.0-x86_64-linux-gnu)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  capybara!
+  puma (~> 6.5)!
+  rack (~> 3.1)!
+  rack-test!
+  roda (~> 3.87)!
+  rspec!
+  sequel (~> 5.88)!
+  sqlite3 (~> 2.5.0)!
+
+BUNDLED WITH
+   2.6.2
