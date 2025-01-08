@@ -2,7 +2,7 @@
 
 module App
   module UseCases
-    class ApplicationUseCases
+    class ApplicationUseCase
     end
   end
 end

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative 'application_use_case'
 require_relative '../../entities/user'
 
 module App

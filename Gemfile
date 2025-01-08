@@ -10,8 +10,10 @@ source 'https://rubygems.org' do
   gem 'rack', '~> 3.1'
 
   group :test do
-    gem 'rspec'
     gem 'capybara'
+    gem 'database_cleaner'
+    gem 'database_cleaner-sequel'
     gem 'rack-test'
+    gem 'rspec'
   end
 end
