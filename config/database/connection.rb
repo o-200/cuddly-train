@@ -1,16 +1,15 @@
 # frozen_string_literal: true
 
 require 'sequel'
+require 'logger'
 
 module Config
   module Database
     class Connection
-      def self.connect
-        @connect ||= Sequel.sqlite('./config/database/database.db')
-      end
+      attr_reader :db
 
-      def self.db
-        connect
+      def initialize
+        @db = Sequel.sqlite('./config/database/database.db', logger: Logger.new($stdout))
       end
     end
   end

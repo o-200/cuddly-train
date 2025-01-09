@@ -13,7 +13,7 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
 
   config.before(:suite) do
-    DB = Config::Database::Connection.connect
+    DB = Config::Database::Connection.new.db
 
     DatabaseCleaner[:sequel].strategy = :transaction
     DatabaseCleaner[:sequel].clean_with(:truncation)
