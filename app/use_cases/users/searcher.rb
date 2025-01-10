@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../../entities/user'
+require_relative '../../services/user_service'
 
 module App
   module UseCases
@@ -9,7 +10,7 @@ module App
         def self.call(params)
           raise unless params[:id]
 
-          user = DB[:users].find(params).first
+          user = UserService.new.find_user(params[:id])
           Entities::User.new(user)
         end
       end
