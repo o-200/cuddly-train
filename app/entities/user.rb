@@ -3,17 +3,19 @@
 module App
   module Entities
     class User
-      attr_accessor :name, :age
+      attr_accessor :name, :age, :created_at
 
       def initialize(params)
-        @name = params[:name]
-        @age  = params[:age]
+        @name       = params[:name]
+        @age        = params[:age]
+        @created_at = params[:created_at]
       end
 
-      def present
+      def to_h
         {
           name: @name,
-          age: @age
+          age: @age,
+          created_at: @created_at
         }
       end
     end

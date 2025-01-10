@@ -8,6 +8,14 @@ module App
         @age        = entity.age
         @created_at = entity.created_at
       end
+
+      def present
+        {
+          name: @name,
+          age: @age,
+          created_at: @created_at
+        }
+      end
     end
   end
 end
