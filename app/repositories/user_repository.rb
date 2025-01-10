@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module App
   module Repositories
     class UserRepository
@@ -13,6 +15,5 @@ module App
         DB[:users] << user
       end
     end
-
   end
 end

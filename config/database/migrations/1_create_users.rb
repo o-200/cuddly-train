@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   up do
     next if DB.table_exists?(:users)
+
     create_table(:users) do
       primary_key :id
       String :name, null: false
