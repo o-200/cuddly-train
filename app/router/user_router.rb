@@ -10,7 +10,7 @@ module App
         r.on 'users' do
           r.on Integer do |id|
             r.get do
-              Controllers::UserController.show(r.params.merge(id: id))
+              Controllers::UserController.new.show(r.params.merge(id: id))
             end
           end
 
@@ -19,7 +19,7 @@ module App
           end
 
           r.post do
-            Controllers::UserController.create(r.params)
+            Controllers::UserController.new.create(r.params)
           end
         end
       end

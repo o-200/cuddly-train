@@ -7,7 +7,7 @@ module App
   module UseCases
     module User
       class UserCreator < ApplicationUseCase
-        def self.call(params)
+        def call(params)
           params = params.transform_keys(&:to_sym)
 
           raise unless params[:name]

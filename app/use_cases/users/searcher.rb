@@ -7,7 +7,7 @@ module App
   module UseCases
     module User
       class Searcher
-        def self.call(params)
+        def call(params)
           raise unless params[:id]
 
           user = UserService.new.find_user(params[:id])
