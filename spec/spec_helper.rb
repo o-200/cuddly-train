@@ -19,11 +19,11 @@ RSpec.configure do |config|
     DatabaseCleaner[:sequel].clean_with(:truncation)
   end
 
-  config.before(:each) do
+  config.before do
     DatabaseCleaner[:sequel].start
   end
 
-  config.after(:each) do
+  config.after do
     DatabaseCleaner[:sequel].clean
   end
 

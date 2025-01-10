@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 RSpec.describe App::Router::UserRouter, type: :request do
-  context '#GET' do
+  describe '#GET' do
     context 'list' do
       before do
         10.times { |n| DB[:users] << { name: 'name', age: n } }
@@ -31,8 +31,9 @@ RSpec.describe App::Router::UserRouter, type: :request do
     end
   end
 
-  context '#POST' do
+  describe '#POST' do
     let(:time_now) { Time.now }
+
     before do
       post '/users', { name: 'Dmitrij', age: 18 }
     end

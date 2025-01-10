@@ -1,0 +1,20 @@
+AllCops:
+  TargetRubyVersion: 3.4.1
+
+require:
+  - rubocop-capybara
+  - rubocop-rspec
+  - rubocop-sequel
+
+Metrics:
+  LineLength:
+    Max: 140
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+RSpec:
+  Enabled: true
+Capybara:
+  Enabled: true
+Sequel:
+  Enabled: true
