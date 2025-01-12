@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
-require_relative '../use_cases/user/registration'
+require 'interactor'
+
+require_relative '../../presenters/user/registration'
 
 module App
-  module Controllers
-    class ApplicationController
+  module UseCases
+    class ApplicationUseCase
     end
 
     class Error < RuntimeError

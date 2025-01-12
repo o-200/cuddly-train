@@ -7,9 +7,14 @@ source 'https://rubygems.org' do
   gem 'puma', '~> 6.5'
   gem 'rack', '~> 3.1'
 
+  gem 'interactor', '~> 3.1'
+
+  gem 'bcrypt', '~> 3.1'
+  gem 'dry-validation', '~> 1.11'
+
   group :test do
-    gem "capybara", "~> 3.40"
-    gem "database_cleaner", "~> 2.1"
+    gem 'capybara', '~> 3.40'
+    gem 'database_cleaner', '~> 2.1'
     gem 'database_cleaner-sequel'
     gem 'rack-test'
     gem 'rspec'
