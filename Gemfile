@@ -11,6 +11,7 @@ source 'https://rubygems.org' do
 
   gem 'bcrypt', '~> 3.1'
   gem 'dry-validation', '~> 1.11'
+  gem 'jwt', '~> 2.10'
 
   group :test do
     gem 'capybara', '~> 3.40'

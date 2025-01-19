@@ -13,6 +13,12 @@ module App
               Controllers::UserController.new.register(r.params)
             end
           end
+
+          r.is 'login' do
+            r.post do
+              Controllers::UserController.new.login(r.params)
+            end
+          end
         end
       end
     end

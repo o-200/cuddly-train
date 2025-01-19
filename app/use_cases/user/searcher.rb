@@ -8,9 +8,7 @@ module App
     module User
       class Searcher
         def call(params)
-          raise unless params[:id]
-
-          user = UserService.new.find_user(params[:id])
+          user = UserService.new.find_uparaser(params)
           Entities::User.new(user)
         end
       end

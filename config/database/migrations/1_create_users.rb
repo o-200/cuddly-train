@@ -7,7 +7,7 @@ Sequel.migration do
     create_table(:users) do
       primary_key :id
       String :email, unique: true
-      String :password_hash
+      String :password_digest
       DateTime :created_at, default: Sequel::CURRENT_TIMESTAMP
     end
   end

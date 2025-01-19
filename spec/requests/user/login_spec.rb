@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require 'bcrypt'
 
 RSpec.describe App::Router::UserRouter, type: :request do
   describe '#POST' do
     let(:time_now) { Time.now }
 
     before do
-      post 'users/register', params
+      DB[:users] << { email: params[:email], password_digest: BCrypt::Password.create(params[:password]) }
+      post 'users/login', params
     end
 
     context 'success' do
@@ -21,10 +23,7 @@ RSpec.describe App::Router::UserRouter, type: :request do
         it 'has keys' do
           json_response = JSON.parse(last_response.body)
 
-          expect(json_response).to have_key('message')
-          expect(json_response).to have_key('user')
-          expect(json_response['user']).to have_key('email')
-          expect(json_response['user']).to have_key('created_at')
+          expect(json_response).to have_key('token')
         end
       end
     end

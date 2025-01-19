@@ -1,2 +1,2 @@
-/config/database/database.db
-/spec/examples.txt
+spec/examples.txt
+config/database/database.db

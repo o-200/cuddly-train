@@ -1,6 +1,7 @@
 GEM
   specs:
-    interactor (3.1.2)
+    jwt (2.10.1)
+      base64
 
 GEM
   remote: https://rubygems.org/
@@ -90,6 +91,7 @@ GEM
       zeitwerk (~> 2.6)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
+    interactor (3.1.2)
     json (2.9.1)
     language_server-protocol (3.17.0.3)
     logger (1.6.5)
@@ -196,7 +198,8 @@ DEPENDENCIES
   database_cleaner (~> 2.1)!
   database_cleaner-sequel!
   dry-validation (~> 1.11)!
-  interactor (~> 3.1)
+  interactor (~> 3.1)!
+  jwt (~> 2.10)
   puma (~> 6.5)!
   rack (~> 3.1)!
   rack-test!
