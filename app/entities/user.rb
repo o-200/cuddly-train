@@ -7,9 +7,10 @@ module App
     class User
       include BCrypt
 
-      attr_accessor :email, :password_digest, :created_at
+      attr_accessor :id, :email, :password_digest, :created_at
 
       def initialize(params)
+        @id = params[:id]
         @email = params[:email]
         @password_digest = params[:password_digest] || BCrypt::Password.create(params[:password])
         @created_at = params[:created_at]
@@ -17,6 +18,7 @@ module App
 
       def to_h
         {
+          id: @id,
           email: @email,
           password_digest: @password_digest,
           created_at: @created_at

@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../use_cases/user/registration'
-require_relative '../use_cases/user/authorization'
-
 module App
   module Controllers
     class ApplicationController

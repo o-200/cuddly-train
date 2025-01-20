@@ -15,7 +15,7 @@ RSpec.describe App::Router::UserRouter, type: :request do
 
       context 'response' do
         it 'is successful' do
-          expect(last_response).to be_ok # be_created
+          expect(last_response).to be_ok # TODO: be_created
         end
 
         it 'has keys' do
@@ -34,7 +34,7 @@ RSpec.describe App::Router::UserRouter, type: :request do
 
       context 'response' do
         it 'is unsuccessful' do
-          expect(last_response).to be_ok # be_unprocessable_entity
+          expect(last_response).to be_ok # TODO: be_unprocessable_entity
         end
 
         it 'has error keys' do

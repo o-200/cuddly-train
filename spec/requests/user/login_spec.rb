@@ -8,7 +8,7 @@ RSpec.describe App::Router::UserRouter, type: :request do
     let(:time_now) { Time.now }
 
     before do
-      DB[:users] << { email: params[:email], password_digest: BCrypt::Password.create(params[:password]) }
+      DB[:users] << { email: params[:email], password_digest: BCrypt::Password.create(params[:password]) } # TODO: use FactoryBot
       post 'users/login', params
     end
 
@@ -17,7 +17,7 @@ RSpec.describe App::Router::UserRouter, type: :request do
 
       context 'response' do
         it 'is successful' do
-          expect(last_response).to be_ok # be_created
+          expect(last_response).to be_ok # TODO: be_created
         end
 
         it 'has keys' do
@@ -33,7 +33,7 @@ RSpec.describe App::Router::UserRouter, type: :request do
 
       context 'response' do
         it 'is unsuccessful' do
-          expect(last_response).to be_ok # be_unprocessable_entity
+          expect(last_response).to be_ok # TODO: be_unprocessable_entity
         end
 
         it 'has error keys' do

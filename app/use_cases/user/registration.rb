@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'bcrypt'
-
-require_relative 'application_use_case'
+require_relative 'user_creator'
+require_relative '../application_use_case'
 require_relative '../../entities/user'
 require_relative '../../validations/user/registration'
+require_relative '../../repositories/user_repository'
 
 module App
   module UseCases
@@ -13,8 +13,7 @@ module App
         def call
           validation = App::Validations::User::Registration.new.call(params)
           if validation.success?
-            user = Entities::User.new(params)
-            DB[:users] << user.to_h
+            UserCreator.new.call(params)
           else
             context.fail!(errors: validation.errors.to_h)
           end
